@@ -28,14 +28,62 @@ html {
 
 .banner {
   margin: auto;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
+  height: 5rem;
+}
+.banner .nav {
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgb(238, 236, 236);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(193, 188, 188);
 }
-.banner .name .dot {
+.banner .nav .name .dot {
   color: red;
 }
-.banner .menu ul {
+.banner .nav .menu ul {
   gap: 4rem;
+}
+.banner .nav .chat input {
+  background-color: white;
+}
+
+.section1 {
+  margin: auto;
+  padding: 1rem 3rem;
+  grid-template-columns: 70% 50%;
+  grid-template-rows: 60% 40%;
+  grid-template-areas: "one three" "two three";
+  border: 1px solid black;
+  min-height: 70vh;
+}
+.section1 .div1 {
+  grid-area: one;
+  border: 1px solid black;
+  flex-direction: column;
+}
+.section1 .div1 .title {
+  align-items: center;
+}
+.section1 .div1 .title p {
+  background: rgb(48, 48, 205);
+  border-radius: 50px;
+  width: 8%;
+  font-size: 20px;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: bold;
+}
+.section1 .div1 h1 {
+  line-height: 50px;
+  font-size: 36px;
+}
+.section1 .div2 {
+  grid-area: two;
+  border: 1px solid black;
+}
+.section1 .div3 {
+  grid-area: three;
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */

@@ -37,20 +37,82 @@ html {
 
 .banner {
   margin: auto;
-  padding: 2rem 3rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgb(238, 236, 236);
+  padding: 1rem 3rem;
 
-  .name {
-    .dot {
-      color: red;
+  height: 5rem;
+
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(193, 188, 188);
+
+    .name {
+      .dot {
+        color: red;
+      }
+    }
+
+    .menu {
+      ul {
+        gap: 4rem;
+      }
+    }
+
+    .chat {
+      input {
+        background-color: white;
+      }
+    }
+  }
+}
+
+// hero-section
+
+.section1 {
+  margin: auto;
+  padding: 1rem 3rem;
+
+  grid-template-columns: 70% 50%;
+  grid-template-rows: 60% 40%;
+  grid-template-areas:
+    "one three"
+    "two three";
+
+  border: 1px solid black;
+  min-height: 70vh;
+
+  .div1 {
+    grid-area: one;
+    border: 1px solid black;
+    flex-direction: column;
+
+    .title {
+      align-items: center;
+      p {
+        background: rgb(48, 48, 205);
+        border-radius: 50px;
+        width: 8%;
+        font-size: 20px;
+        text-align: center;
+        height: fit-content;
+        font-weight: bold;
+      }
+    }
+
+    h1 {
+      line-height: 50px;
+      font-size: 36px;
     }
   }
 
-  .menu {
-    ul {
-      gap: 4rem;
-    }
+  .div2 {
+    grid-area: two;
+    border: 1px solid black;
+  }
+
+  .div3 {
+    grid-area: three;
+    border: 1px solid black;
   }
 }
