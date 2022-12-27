@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "playfair display sc", sans-serif;
+}
+
+$color: rgb(195, 105, 21);
+$bg: rgb(85, 178, 193);
+$text-color: #000;
+$link-color: blue;
+$border-color: yellow;
+
+// default styles
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// banner
+
+.banner {
+  margin: auto;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(238, 236, 236);
+
+  .name {
+    .dot {
+      color: red;
+    }
+  }
+
+  .menu {
+    ul {
+      gap: 4rem;
+    }
+  }
+}
