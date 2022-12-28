@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "playfair display sc", sans-serif;
+  font-family: sans-serif;
 }
 
 $color: rgb(195, 105, 21);
@@ -11,6 +11,7 @@ $link-color: blue;
 $border-color: yellow;
 
 // default styles
+
 ul {
   list-style: none;
 }
@@ -70,21 +71,19 @@ html {
 // hero-section
 
 .section1 {
-  margin: auto;
-  padding: 1rem 3rem;
-
-  grid-template-columns: 70% 50%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 60% 40%;
   grid-template-areas:
     "one three"
     "two three";
 
-  border: 1px solid black;
-  min-height: 70vh;
+  min-height: 100vh;
 
   .div1 {
+    padding: 1rem 3rem;
+
     grid-area: one;
-    border: 1px solid black;
+
     flex-direction: column;
 
     .title {
@@ -92,7 +91,8 @@ html {
       p {
         background: rgb(48, 48, 205);
         border-radius: 50px;
-        width: 8%;
+        width: 10%;
+
         font-size: 20px;
         text-align: center;
         height: fit-content;
@@ -100,19 +100,370 @@ html {
       }
     }
 
+    p {
+      font-weight: bold;
+    }
+
     h1 {
-      line-height: 50px;
-      font-size: 36px;
+      line-height: 3rem;
+      font-size: 50px;
+    }
+
+    .down {
+      margin-top: 5px;
+      min-height: 40vh;
+      grid-template-areas:
+        "a d"
+        "b d"
+        "c e"
+        "f g";
+
+      .a {
+        grid-area: a;
+
+        gap: 2rem;
+
+        h4 {
+          background: rgb(242, 60, 4);
+          height: 30px;
+          width: 90px;
+          text-align: center;
+          padding-top: 3px;
+          border: 1px solid black;
+        }
+      }
+      .b {
+        grid-area: b;
+      }
+      .c {
+        grid-area: c;
+      }
+      .d {
+        grid-area: d;
+        padding-left: 2rem;
+        padding-top: 1rem;
+
+        img {
+          height: 100px;
+        }
+      }
+
+      .e {
+        grid-area: e;
+      }
+      .f {
+        grid-area: f;
+        height: 10rem;
+      }
+      .g {
+        grid-area: g;
+      }
     }
   }
 
   .div2 {
     grid-area: two;
-    border: 1px solid black;
+    color: #fff;
+    padding: 6rem 3rem;
+
+    background: #000;
+    justify-content: space-between;
+
+    .left {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      line-height: 1rem;
+
+      h3 {
+        background: yellow;
+        color: #000;
+        height: 20px;
+        width: 110px;
+        text-align: center;
+      }
+    }
+
+    .right {
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      hr {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        height: 5px;
+      }
+    }
   }
 
   .div3 {
     grid-area: three;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+    background: url(asset/me.jpeg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+    .fa-github {
+      position: absolute;
+      top: 55vh;
+      left: 10vw;
+
+      font-size: 60px;
+
+      animation: move1 6s ease-out 2s infinite normal both;
+    }
+
+    .fa-html5 {
+      position: absolute;
+      top: 55vh;
+      left: 35vw;
+      font-size: 60px;
+      color: rgb(196, 81, 20);
+      animation: move2 6s ease-out 2s infinite normal both;
+    }
+
+    .fa-js {
+      position: absolute;
+      top: 35vh;
+      left: 35vw;
+      font-size: 60px;
+      color: yellow;
+
+      animation: move3 6s ease-out 2s infinite normal both;
+    }
+
+    .fa-react {
+      position: absolute;
+      top: 15vh;
+      left: 20vw;
+      font-size: 60px;
+      color: rgb(39, 135, 194);
+      animation: move4 6s ease-out 2s infinite normal both;
+    }
+    .fa-css3-alt {
+      position: absolute;
+      top: 35vh;
+      left: 10vw;
+      font-size: 60px;
+      color: blue;
+      animation: move5 6s ease-out 2s infinite normal both;
+    }
+  }
+}
+@keyframes move1 {
+  // github
+  0% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+
+  //   html
+  20% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+
+  //   js
+  40% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+
+  //   react
+  60% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+
+  //  css
+  80% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+
+  100% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move2 {
+  // github
+  80% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+
+  100% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+
+  //   html
+  0% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+
+  //   js
+  20% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+
+  //   react
+  40% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+
+  //  css
+  60% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move3 {
+  // github
+  60% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+
+  //   html
+  80% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  //   js
+  100% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+
+  //   js
+  0% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+
+  //   react
+  20% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+
+  //  css
+  40% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move4 {
+  // github
+  40% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+
+  //   html
+  60% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+
+  //   js
+  80% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  //   react
+  100% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+
+  //   react
+  0% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+
+  //  css
+  20% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move5 {
+  // github
+  20% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+
+  //   html
+  40% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+
+  //   js
+  60% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+
+  //   react
+  80% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+
+  //  css
+  100% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+
+  //  css
+  0% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
   }
 }

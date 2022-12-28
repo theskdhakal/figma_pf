@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "playfair display sc", sans-serif;
+  font-family: sans-serif;
 }
 
 ul {
@@ -48,17 +48,14 @@ html {
 }
 
 .section1 {
-  margin: auto;
-  padding: 1rem 3rem;
-  grid-template-columns: 70% 50%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 60% 40%;
   grid-template-areas: "one three" "two three";
-  border: 1px solid black;
-  min-height: 70vh;
+  min-height: 100vh;
 }
 .section1 .div1 {
+  padding: 1rem 3rem;
   grid-area: one;
-  border: 1px solid black;
   flex-direction: column;
 }
 .section1 .div1 .title {
@@ -67,7 +64,7 @@ html {
 .section1 .div1 .title p {
   background: rgb(48, 48, 205);
   border-radius: 50px;
-  width: 8%;
+  width: 10%;
   font-size: 20px;
   text-align: center;
   height: -webkit-fit-content;
@@ -75,15 +72,455 @@ html {
   height: fit-content;
   font-weight: bold;
 }
+.section1 .div1 p {
+  font-weight: bold;
+}
 .section1 .div1 h1 {
-  line-height: 50px;
-  font-size: 36px;
+  line-height: 3rem;
+  font-size: 50px;
+}
+.section1 .div1 .down {
+  margin-top: 5px;
+  min-height: 40vh;
+  grid-template-areas: "a d" "b d" "c e" "f g";
+}
+.section1 .div1 .down .a {
+  grid-area: a;
+  gap: 2rem;
+}
+.section1 .div1 .down .a h4 {
+  background: rgb(242, 60, 4);
+  height: 30px;
+  width: 90px;
+  text-align: center;
+  padding-top: 3px;
+  border: 1px solid black;
+}
+.section1 .div1 .down .b {
+  grid-area: b;
+}
+.section1 .div1 .down .c {
+  grid-area: c;
+}
+.section1 .div1 .down .d {
+  grid-area: d;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+.section1 .div1 .down .d img {
+  height: 100px;
+}
+.section1 .div1 .down .e {
+  grid-area: e;
+}
+.section1 .div1 .down .f {
+  grid-area: f;
+  height: 10rem;
+}
+.section1 .div1 .down .g {
+  grid-area: g;
 }
 .section1 .div2 {
   grid-area: two;
-  border: 1px solid black;
+  color: #fff;
+  padding: 6rem 3rem;
+  background: #000;
+  justify-content: space-between;
+}
+.section1 .div2 .left {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1rem;
+}
+.section1 .div2 .left h3 {
+  background: yellow;
+  color: #000;
+  height: 20px;
+  width: 110px;
+  text-align: center;
+}
+.section1 .div2 .right {
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.section1 .div2 .right hr {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  height: 5px;
 }
 .section1 .div3 {
   grid-area: three;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
+  background: url(asset/me.jpeg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+.section1 .div3 .fa-github {
+  position: absolute;
+  top: 55vh;
+  left: 10vw;
+  font-size: 60px;
+  -webkit-animation: move1 6s ease-out 2s infinite normal both;
+          animation: move1 6s ease-out 2s infinite normal both;
+}
+.section1 .div3 .fa-html5 {
+  position: absolute;
+  top: 55vh;
+  left: 35vw;
+  font-size: 60px;
+  color: rgb(196, 81, 20);
+  -webkit-animation: move2 6s ease-out 2s infinite normal both;
+          animation: move2 6s ease-out 2s infinite normal both;
+}
+.section1 .div3 .fa-js {
+  position: absolute;
+  top: 35vh;
+  left: 35vw;
+  font-size: 60px;
+  color: yellow;
+  -webkit-animation: move3 6s ease-out 2s infinite normal both;
+          animation: move3 6s ease-out 2s infinite normal both;
+}
+.section1 .div3 .fa-react {
+  position: absolute;
+  top: 15vh;
+  left: 20vw;
+  font-size: 60px;
+  color: rgb(39, 135, 194);
+  -webkit-animation: move4 6s ease-out 2s infinite normal both;
+          animation: move4 6s ease-out 2s infinite normal both;
+}
+.section1 .div3 .fa-css3-alt {
+  position: absolute;
+  top: 35vh;
+  left: 10vw;
+  font-size: 60px;
+  color: blue;
+  -webkit-animation: move5 6s ease-out 2s infinite normal both;
+          animation: move5 6s ease-out 2s infinite normal both;
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  20% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  40% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  60% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  80% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+  100% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  20% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  40% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  60% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  80% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+  100% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+}
+@-webkit-keyframes move2 {
+  80% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  100% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  0% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  20% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  40% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  60% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@keyframes move2 {
+  80% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  100% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  0% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  20% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  40% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  60% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@-webkit-keyframes move3 {
+  60% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  80% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  100% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  0% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  20% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  40% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@keyframes move3 {
+  60% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  80% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  100% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  0% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  20% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  40% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@-webkit-keyframes move4 {
+  40% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  60% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  80% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  100% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  0% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  20% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@keyframes move4 {
+  40% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  60% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  80% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  100% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  0% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  20% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@-webkit-keyframes move5 {
+  20% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  40% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  60% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  80% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  100% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+  0% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+}
+@keyframes move5 {
+  20% {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+  }
+  40% {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+  }
+  60% {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+  }
+  80% {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+  }
+  100% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
+  0% {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+  }
 }/*# sourceMappingURL=style.css.map */
