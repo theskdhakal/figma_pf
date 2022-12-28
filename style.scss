@@ -34,6 +34,19 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(239, 46, 8);
+}
+
+li:hover {
+  transform: scale(1.2);
+}
+
 // banner
 
 .banner {
@@ -81,7 +94,7 @@ html {
 
   .div1 {
     padding: 1rem 3rem;
-
+    background: rgb(248, 245, 245);
     grid-area: one;
 
     flex-direction: column;
@@ -250,8 +263,33 @@ html {
       color: blue;
       animation: move5 6s ease-out 2s infinite normal both;
     }
+    .sub {
+      background: #fff;
+      position: absolute;
+      top: 100vh;
+      left: 10vw;
+      color: #000;
+      width: max-content;
+      justify-content: space-between;
+      gap: 4rem;
+      text-align: center;
+
+      h4 {
+        font-weight: normal;
+        font-size: 20px;
+      }
+
+      .box {
+        background: #000;
+        color: #fff;
+        width: 40px;
+        font-size: 25px;
+      }
+    }
   }
 }
+
+// animations
 @keyframes move1 {
   // github
   0% {
@@ -466,4 +504,12 @@ html {
     top: 35vh;
     left: 10vw;
   }
+}
+
+// footer
+footer {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  background: $bg;
 }

@@ -26,6 +26,19 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(239, 46, 8);
+}
+
+li:hover {
+  transform: scale(1.2);
+}
+
 .banner {
   margin: auto;
   padding: 1rem 3rem;
@@ -55,6 +68,7 @@ html {
 }
 .section1 .div1 {
   padding: 1rem 3rem;
+  background: rgb(248, 245, 245);
   grid-area: one;
   flex-direction: column;
 }
@@ -201,6 +215,29 @@ html {
   color: blue;
   -webkit-animation: move5 6s ease-out 2s infinite normal both;
           animation: move5 6s ease-out 2s infinite normal both;
+}
+.section1 .div3 .sub {
+  background: #fff;
+  position: absolute;
+  top: 100vh;
+  left: 10vw;
+  color: #000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: space-between;
+  gap: 4rem;
+  text-align: center;
+}
+.section1 .div3 .sub h4 {
+  font-weight: normal;
+  font-size: 20px;
+}
+.section1 .div3 .sub .box {
+  background: #000;
+  color: #fff;
+  width: 40px;
+  font-size: 25px;
 }
 
 @-webkit-keyframes move1 {
@@ -523,4 +560,10 @@ html {
     top: 35vh;
     left: 10vw;
   }
+}
+footer {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  background: rgb(85, 178, 193);
 }/*# sourceMappingURL=style.css.map */
