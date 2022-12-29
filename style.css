@@ -219,8 +219,8 @@ li:hover {
 .section1 .div3 .sub {
   background: #fff;
   position: absolute;
-  top: 100vh;
-  left: 10vw;
+  top: 95vh;
+  left: 15vw;
   color: #000;
   width: -webkit-max-content;
   width: -moz-max-content;
