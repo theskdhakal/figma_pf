@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 ul {
@@ -55,9 +55,13 @@ li:hover {
 }
 .banner .nav .menu ul {
   gap: 4rem;
+  font-size: large;
 }
 .banner .nav .chat input {
-  background-color: white;
+  background-color: rgba(64, 175, 147, 0.425);
+  border-radius: 6px;
+  border: 1px solid black;
+  font-size: 20px;
 }
 
 .section1 {
@@ -67,7 +71,7 @@ li:hover {
   min-height: 100vh;
 }
 .section1 .div1 {
-  padding: 1rem 3rem;
+  padding: 9rem 6rem;
   background: rgb(248, 245, 245);
   grid-area: one;
   flex-direction: column;
@@ -78,10 +82,9 @@ li:hover {
 .section1 .div1 .title p {
   background: rgb(48, 48, 205);
   border-radius: 50px;
-  width: 10%;
+  width: 13%;
   font-size: 20px;
   text-align: center;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   font-weight: bold;
@@ -96,43 +99,16 @@ li:hover {
 .section1 .div1 .down {
   margin-top: 5px;
   min-height: 40vh;
-  grid-template-areas: "a d" "b d" "c e" "f g";
 }
-.section1 .div1 .down .a {
-  grid-area: a;
-  gap: 2rem;
-}
-.section1 .div1 .down .a h4 {
-  background: rgb(242, 60, 4);
-  height: 30px;
-  width: 90px;
+.section1 .div1 .down h2 {
+  margin-top: 4rem;
+  background: linear-gradient(to right, rgb(167, 116, 51), rgb(35, 128, 43));
+  height: 60px;
+  width: 300px;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 8px;
   border: 1px solid black;
-}
-.section1 .div1 .down .b {
-  grid-area: b;
-}
-.section1 .div1 .down .c {
-  grid-area: c;
-}
-.section1 .div1 .down .d {
-  grid-area: d;
-  padding-left: 2rem;
-  padding-top: 1rem;
-}
-.section1 .div1 .down .d img {
-  height: 100px;
-}
-.section1 .div1 .down .e {
-  grid-area: e;
-}
-.section1 .div1 .down .f {
-  grid-area: f;
-  height: 10rem;
-}
-.section1 .div1 .down .g {
-  grid-area: g;
+  border-radius: 6px;
 }
 .section1 .div2 {
   grid-area: two;
@@ -177,8 +153,7 @@ li:hover {
   top: 55vh;
   left: 10vw;
   font-size: 60px;
-  -webkit-animation: move1 6s ease-out 2s infinite normal both;
-          animation: move1 6s ease-out 2s infinite normal both;
+  animation: move1 6s ease-out 2s infinite normal both;
 }
 .section1 .div3 .fa-html5 {
   position: absolute;
@@ -186,8 +161,7 @@ li:hover {
   left: 35vw;
   font-size: 60px;
   color: rgb(196, 81, 20);
-  -webkit-animation: move2 6s ease-out 2s infinite normal both;
-          animation: move2 6s ease-out 2s infinite normal both;
+  animation: move2 6s ease-out 2s infinite normal both;
 }
 .section1 .div3 .fa-js {
   position: absolute;
@@ -195,8 +169,7 @@ li:hover {
   left: 35vw;
   font-size: 60px;
   color: yellow;
-  -webkit-animation: move3 6s ease-out 2s infinite normal both;
-          animation: move3 6s ease-out 2s infinite normal both;
+  animation: move3 6s ease-out 2s infinite normal both;
 }
 .section1 .div3 .fa-react {
   position: absolute;
@@ -204,8 +177,7 @@ li:hover {
   left: 20vw;
   font-size: 60px;
   color: rgb(39, 135, 194);
-  -webkit-animation: move4 6s ease-out 2s infinite normal both;
-          animation: move4 6s ease-out 2s infinite normal both;
+  animation: move4 6s ease-out 2s infinite normal both;
 }
 .section1 .div3 .fa-css3-alt {
   position: absolute;
@@ -213,8 +185,7 @@ li:hover {
   left: 10vw;
   font-size: 60px;
   color: blue;
-  -webkit-animation: move5 6s ease-out 2s infinite normal both;
-          animation: move5 6s ease-out 2s infinite normal both;
+  animation: move5 6s ease-out 2s infinite normal both;
 }
 .section1 .div3 .sub {
   background: #fff;
@@ -222,7 +193,6 @@ li:hover {
   top: 95vh;
   left: 15vw;
   color: #000;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   justify-content: space-between;
@@ -238,39 +208,6 @@ li:hover {
   color: #fff;
   width: 40px;
   font-size: 25px;
-}
-
-@-webkit-keyframes move1 {
-  0% {
-    position: absolute;
-    top: 55vh;
-    left: 10vw;
-  }
-  20% {
-    position: absolute;
-    top: 55vh;
-    left: 35vw;
-  }
-  40% {
-    position: absolute;
-    top: 35vh;
-    left: 35vw;
-  }
-  60% {
-    position: absolute;
-    top: 15vh;
-    left: 20vw;
-  }
-  80% {
-    position: absolute;
-    top: 35vh;
-    left: 10vw;
-  }
-  100% {
-    position: absolute;
-    top: 55vh;
-    left: 10vw;
-  }
 }
 
 @keyframes move1 {
@@ -305,38 +242,6 @@ li:hover {
     left: 10vw;
   }
 }
-@-webkit-keyframes move2 {
-  80% {
-    position: absolute;
-    top: 55vh;
-    left: 10vw;
-  }
-  100% {
-    position: absolute;
-    top: 55vh;
-    left: 35vw;
-  }
-  0% {
-    position: absolute;
-    top: 55vh;
-    left: 35vw;
-  }
-  20% {
-    position: absolute;
-    top: 35vh;
-    left: 35vw;
-  }
-  40% {
-    position: absolute;
-    top: 15vh;
-    left: 20vw;
-  }
-  60% {
-    position: absolute;
-    top: 35vh;
-    left: 10vw;
-  }
-}
 @keyframes move2 {
   80% {
     position: absolute;
@@ -364,38 +269,6 @@ li:hover {
     left: 20vw;
   }
   60% {
-    position: absolute;
-    top: 35vh;
-    left: 10vw;
-  }
-}
-@-webkit-keyframes move3 {
-  60% {
-    position: absolute;
-    top: 55vh;
-    left: 10vw;
-  }
-  80% {
-    position: absolute;
-    top: 55vh;
-    left: 35vw;
-  }
-  100% {
-    position: absolute;
-    top: 35vh;
-    left: 35vw;
-  }
-  0% {
-    position: absolute;
-    top: 35vh;
-    left: 35vw;
-  }
-  20% {
-    position: absolute;
-    top: 15vh;
-    left: 20vw;
-  }
-  40% {
     position: absolute;
     top: 35vh;
     left: 10vw;
@@ -433,38 +306,6 @@ li:hover {
     left: 10vw;
   }
 }
-@-webkit-keyframes move4 {
-  40% {
-    position: absolute;
-    top: 55vh;
-    left: 10vw;
-  }
-  60% {
-    position: absolute;
-    top: 55vh;
-    left: 35vw;
-  }
-  80% {
-    position: absolute;
-    top: 35vh;
-    left: 35vw;
-  }
-  100% {
-    position: absolute;
-    top: 15vh;
-    left: 20vw;
-  }
-  0% {
-    position: absolute;
-    top: 15vh;
-    left: 20vw;
-  }
-  20% {
-    position: absolute;
-    top: 35vh;
-    left: 10vw;
-  }
-}
 @keyframes move4 {
   40% {
     position: absolute;
@@ -492,38 +333,6 @@ li:hover {
     left: 20vw;
   }
   20% {
-    position: absolute;
-    top: 35vh;
-    left: 10vw;
-  }
-}
-@-webkit-keyframes move5 {
-  20% {
-    position: absolute;
-    top: 55vh;
-    left: 10vw;
-  }
-  40% {
-    position: absolute;
-    top: 55vh;
-    left: 35vw;
-  }
-  60% {
-    position: absolute;
-    top: 35vh;
-    left: 35vw;
-  }
-  80% {
-    position: absolute;
-    top: 15vh;
-    left: 20vw;
-  }
-  100% {
-    position: absolute;
-    top: 35vh;
-    left: 10vw;
-  }
-  0% {
     position: absolute;
     top: 35vh;
     left: 10vw;
